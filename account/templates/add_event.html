@@ -1,0 +1,30 @@
+{% extends 'dashboard.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+
+<div style="padding-top:2em;padding-left:3em;background-color:#afc3c3;padding-bottom:3em">
+    <center><h1></h1>
+        <div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
+            <div class="form-title">
+                
+            </div>
+            <div class="form-body">
+                <form action="" method="POST" enctype="multipart/form-data"> 
+                    {% csrf_token %}
+                    <div class="form-group"> 
+                    {{form|crispy}}
+                    
+                
+                </div> <button type="submit" class="btn btn-default">Submit</button> </form> 
+            </div>
+        </div>
+     </center>
+     </div>
+
+
+
+{% endblock %}

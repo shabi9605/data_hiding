@@ -1,0 +1,23 @@
+{% extends 'compose_mail.html' %}
+
+
+{% block content %}
+
+<div style="background-color: darkgray;">
+
+
+
+<div class="card mb-3" style="padding: 2em;">
+    <img class="card-img-top" src="{{mail.image.url}}" alt="Card image cap" style="width: 20em;height: 20em;">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 1.8em;font-weight: bold;">Subject: {{mail.subject}}</h5>
+      <p class="card-text" style="font-size: 1.8em;font-weight: bold;">Message: {{mail.message}}</p>
+      
+    </div>
+  </div>
+
+
+
+</div>
+
+{% endblock %}

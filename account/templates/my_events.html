@@ -1,0 +1,47 @@
+{% extends 'dashboard.html' %}
+
+
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Event Name</th>
+        <th scope="col">Event Date</th>
+        <th scope="col">Area</th>
+        <th scope="col">Time</th>
+        <th scope="col">Description</th>
+      
+
+       
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in my_events %}
+      <tr style="background-color: #d9a3a3;">
+
+        <td>{{ i.event_name}}</td>
+        <td>{{ i.event_date}}</td>
+        <td>{{ i.event_area }}</td>
+        <td>{{ i.event_time }}</td>
+        <td>{{ i.description }}</td>
+        
+
+        
+      
+        
+
+        
+
+       
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+</table>
+
+
+{% endblock %}

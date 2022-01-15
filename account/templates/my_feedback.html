@@ -1,0 +1,45 @@
+{% extends 'dashboard.html' %}
+
+
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Feedback</th>
+        
+      
+
+       
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in my_events %}
+      <tr style="background-color: #d9a3a3;">
+
+        <td>{{ i.user}}</td>
+        <td>{{ i.title}}</td>
+        <td>{{i.feedback}}</td>
+      
+        
+
+        
+      
+        
+
+        
+
+       
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+</table>
+
+
+{% endblock %}

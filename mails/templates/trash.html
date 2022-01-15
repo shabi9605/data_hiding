@@ -1,0 +1,28 @@
+{% extends 'compose_mail.html' %}
+
+
+{% block content %}
+
+<div style="background-color: aquamarine;padding-bottom: 1em;">
+    <h1>Trash Mails</h1>
+
+{% for i in trash %}
+
+<div class="card" style="margin-top: 1em;background-color: coral;margin-bottom: 1em;margin-left: 1em;margin-right: 1em;padding: 2em;">
+    <div class="card-header" style="font-size: 1.6em;" >
+      receiver: {{i.receiver}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 1.4em;" >subject: {{i.subject}}</h5>
+     
+
+      
+      
+    </div>
+  </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

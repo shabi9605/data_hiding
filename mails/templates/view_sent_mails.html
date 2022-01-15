@@ -1,0 +1,35 @@
+{% extends 'compose_mail.html' %}
+
+
+{% block content %}
+
+<div style="background-color: aquamarine;padding-bottom: 1em;">
+    <h1>Sended Mails</h1>
+
+{% for i in sented_items %}
+
+<div class="card" style="margin-top: 1em;background-color: coral;margin-bottom: 1em;margin-left: 1em;margin-right: 1em;padding: 2em;">
+    <div class="card-header" style="font-size: 1.6em;" >
+      receiver: {{i.receiver}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 1.4em;" >subject: {{i.subject}}</h5>
+      <form action="{% url 'view_particular_mail1' i.id %}" style="margin-top: 1em;" method="POST">
+
+        {% csrf_token %}
+        <label for="">Key</label>
+        <input type="text" name="key" placeholder="enter secret key" id="">
+        <input type="submit" style="background-color: crimson;">
+
+      </form>
+
+      <a href="{% url 'move_trash' i.id %}" class="btn btn-primary" style="margin-top: 1em;">Trash</a>
+      
+    </div>
+  </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
